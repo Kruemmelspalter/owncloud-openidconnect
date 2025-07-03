@@ -129,9 +129,9 @@ class AutoProvisioningService {
 		}
 		
 		if ($this->client->mode() === 'email') {
-            $user->setEMailAddress($emailOrUserId);
-        }
-        
+			$user->setEMailAddress($emailOrUserId);
+		}
+		
 		$user->setEnabled(true);
 
 		$groups = $config['groups'] ?? [];
