@@ -126,6 +126,11 @@ class AutoProvisioningService {
 		if (!$user) {
 			throw new LoginException("Unable to create user $userId");
 		}
+		
+		if ($this->client->mode() === 'email') {
+            $user->setEMailAddress($emailOrUserId);
+        }
+        
 		$user->setEnabled(true);
 
 		$groups = $config['groups'] ?? [];
