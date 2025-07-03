@@ -288,7 +288,7 @@ class Client extends OpenIDConnectClient {
 		return null;
 	}
 
-	public function getUserGroupIds($userInfo): ?string {
+	public function getUserGroupIds($userInfo): ?array {
 		$groupsClaim = $this->getGroupsClaim();
 		if ($groupsClaim) {
 			return $userInfo->$groupsClaim;
