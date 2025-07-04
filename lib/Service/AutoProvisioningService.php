@@ -206,7 +206,7 @@ class AutoProvisioningService {
 					$group->addUser($user);
 					$this->logger->debug('AutoProvisioningService: adding to group ' . $group->getGID());
 				} else {
-					$this->logger->debug('AutoProvisioningService: not adding to unknown group ' . $group->getGID());
+					$this->logger->debug('AutoProvisioningService: not adding to unknown group ' . $groupId);
 				}
 			}
 		}
